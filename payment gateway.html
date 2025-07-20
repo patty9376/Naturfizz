@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+</head>
+<style>
+    body {
+        background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        background: #fff;
+        max-width: 350px;
+        margin: 60px auto;
+        padding: 30px 25px 20px 25px;
+        border-radius: 12px;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 25px;
+        font-weight: 600;
+    }
+
+    form label {
+        display: block;
+        margin-bottom: 6px;
+        color: #555;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    form input[type="text"] {
+        width: 330px;
+        padding: 9px 12px;
+        margin-bottom: 18px;
+        border: 1px solid #bfc9d1;
+        border-radius: 6px;
+        font-size: 15px;
+        background: #f7fafd;
+        transition: border 0.2s;
+    }
+
+    form input[type="text"]:focus {
+        border: 1.5px solid #74ebd5;
+        outline: none;
+        background: #fff;
+    }
+    .button{
+        width: 100px;
+        height: 50px;
+        padding: 10px;
+
+    }
+</style>
+<body>
+    <div class="container" >
+        <h2>Secure Payment</h2>
+        <form>
+           
+            <label for="text">Card Holder Name</label>
+            <input type="text" id="name" placeholder="Name">
+            <label for="Card">Card Number</label>
+            <input type="text" id="Card" maxlength="16" placeholder="1234 5678 1235 6598" required><br>
+            <label for="expiry">Expiry Date</label>
+            <input type="text" id="Expiry"  placeholder="12/25"><br>
+            <label for="CVV">CVV</label>
+            <input type="text" id="CVV" maxlength="3" placeholder="560"><br>
+            <label for="CVV">Amount</label>
+            <input type="text" id="Amount" maxlength="3"  placeholder="XXXXXX">
+            <button class="button">Pay Now</button>
+            
+        </form>
+        </div>
+</body>
+</html>

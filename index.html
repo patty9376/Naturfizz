@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naturfizz</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    html, body {
+      height: 100%;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(170deg, #787a84 20%, #bbbcc3 50%, #dfe0e2 100%);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    main {
+      flex: 1;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      padding: 20px 40px;
+      background: #787a84;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      font-size: 36px;
+      color: #fff;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+    nav a {
+      color: #fff;
+      font-size: 18px;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #bbbcc3 ;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color:#9C968F;
+      transition: width 0.3s ease;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    .login, .cta-btn {
+      padding: 10px 24px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .login {
+      background:#ffd700;
+      color: #1e1e2f;
+      border: 2px solid #1e1e2f;
+    }
+    .login:hover {
+      background: #787a84;
+      color: #000;
+      transform: scale(1.05);
+    }
+    .cta-btn {
+      border: 2px solid #1e1e2f;
+      background: #ffd700;
+      color: #000;
+      
+    }
+    .cta-btn:hover {
+      background: #787a84;
+      color: #1e1e2f;
+      transform: scale(1.05);
+    }
+    .hero {
+      max-width: 1100px;
+      margin: 60px auto;
+      text-align: center;
+      color: #000;
+    }
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+    footer {
+      margin-top: 60px;
+      position: sticky;
+    }
+    .footer-main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 30px 20px;
+      background: #787a84;
+      color: black;
+    }
+    .footer-main div {
+      flex: 1;
+      min-width: 200px;
+      margin: 10px;
+    }
+    .footer-main h3, .footer-main h4 {
+      margin-bottom: 10px;
+    }
+    .footer-main ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-main a {
+      color: black;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 5px;
+    }
+    .footer-bottom {
+      text-align: center;
+      padding: 15px 20px;
+      background-color: #909298;
+      color: black;
+      font-size: 20px;
+    }
+    .footer-bottom {
+            text-align: center;
+            padding: 15px 20px;
+            font-size: 20px;
+        }
+        .footer-bottom a {
+            text-decoration: none;
+            color: black;
+            margin-right: 10px;
+        }
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+     .footer-bottom a:hover {
+            text-decoration: underline;
+     }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Naturfizz</h1>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/about section.html">About</a>
+      <a href="/product.html">Product</a>
+      <a href="/query form.html">Query</a>
+      <a href="/feedback form.html">Feedback</a>
+      <a href="/Contact.html">Contact Us</a>
+      <a class="login" href="/login page.html">Login</a>
+      <a href="/Order now.html" class="cta-btn">Order Now</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <h2>Welcome to Naturfizz</h2>
+      <p>Nutrifizz is a sugar-free, prebiotic juice designed to be a more digestive-friendly alternative to regular soft drinks — think of it as the soda you can sip guilt-free.</p>
+      <p>Naturfizz comes in a wide variety of refreshing fruity flavors including Mango, Apple, Lemon, Berry, Kiwi Lemon, Orange, and more. Each drink is crafted using natural fruit extracts and is free from artificial colors and preservatives. It's not just a juice — it's a smart, health-forward alternative that supports gut health and hydration.</p>
+      <p>Perfect for any occasion — whether you're relaxing, working, or working out — Naturfizz offers guilt-free fizz with taste and nutrition in every sip.</p>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-main">
+      <div>
+        <h3>Naturfizz</h3>
+        <p>Naturfizz is more than a soft drink brand — it's a digital experience showcasing guilt-free fizz through interactive galleries, smooth navigation, and rich content. Whether you're here to explore healthy soda options or place a quick order, Naturfizz blends taste, tech, and trust into every sip — and click.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/Naturefizz.html">Home</a></li>
+          <li><a href="/about section.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/login page.html">Login</a></li>
+        </ul>
+      </div>
+      <div id="Contact">
+        <h4>Contact</h4>
+        <p>Email: infonaturfizz@gmail.com</p>
+        <p>Phone: +91-9876543210</p>
+        <p>Location: Kota, Rajasthan</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Naturfizz. All rights reserved || Designed by
+      <a href="https://www.linkedin.com/in/ganeshan-rathor-2ab402317/" target="_blank">Ganeshan Rathor</a>
+    </div>
+  </footer>
+</body>
+</html>

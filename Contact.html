@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    html, body {
+      height: 100%;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(170deg, #927a5e 20%, #5d493d 64%, #1e1e1e 90%);
+      color: wheat;
+    }
+    header {
+      color: wheat;
+      padding: 15px 30px;
+      font-size: 20px;
+      background: rgba(93, 73, 61, 1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    header h1 {
+      font-size: 30px;
+    }
+    nav a {
+      color: wheat;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 20px;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+    main {
+      flex: 1;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: wheat;
+      text-align: center;
+    }
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 30px;
+    }
+    .contact-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      border: 1px solid wheat;
+      border-radius: 10px;
+      padding: 30px;
+      gap: 30px;
+      margin: 10px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    .contact-card img{
+        width: 100px;
+    }
+    a {
+      color: wheat;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background-color: rgba(93, 73, 61, 1);
+      color: wheat;
+    }
+    .footer-bottom {
+      text-align: center;
+      padding: 15px 20px;
+      font-size: 20px;
+    }
+    .footer-bottom a {
+      text-decoration: none;
+      color: wheat;
+      margin-right: 10px;
+    }
+    .footer-bottom a:hover {
+      text-decoration: underline;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Naturfizz</h1>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/about section.html">About</a>
+      <a href="/product.html">Product</a>
+      <a href="/query form.html">Query</a>
+      <a href="/feedback form.html">Feedback</a>
+      <a href="/Contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Get in Touch</h2>
+    <div class="contact-info">
+      <div class="contact-card">
+        <h3>Email</h3>
+        <p><a href="mailto:infonaturfizz@gmail.com">infonaturfizz@gmail.com</a></p>
+      </div>
+      <div class="contact-card">
+        <h3>Phone</h3>
+        <p>+91 98765 43210</p>
+      </div>
+      <div class="contact-card">
+        <h3>Address</h3>
+        <p>Kota City<br>Rajasthan, India</p>
+      </div>
+      <div class="contact-card">
+        <img src="/qrcode,linked.png" alt="">
+        <h3>LinkedIn</h3>
+        <p><a href="https://www.linkedin.com/in/ganeshan-rathor-2ab402317/" target="_blank">Ganeshan Rathor</a></p>
+      </div>
+      <div class="contact-card">
+        <img src="/qrcode,instagram.png" alt="">
+        <h3>Instagram</h3>
+        <p><a href="https://www.instagram.com/ganeshan_rathor/" target="_blank">Ganeshanrathor</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-bottom">
+      &copy; 2025 Naturfizz. All rights reserved || Designed by
+      <a href="https://www.linkedin.com/in/ganeshan-rathor-2ab402317/" target="_blank">Ganeshan Rathor</a>
+    </div>
+  </footer>
+</body>
+</html>

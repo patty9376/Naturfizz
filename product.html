@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Grid Gallery</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    html, body {
+      height: 100%;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(135deg, #141e30, #243b55);
+      color: wheat;
+    }
+    main {
+      flex: 1;
+    }
+    header {
+      color: wheat;
+      padding: 15px 30px;
+      font-size: 20px;
+      position: sticky;
+      top: 0;
+      background: #243b55;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      z-index: 999;
+    }
+    header h1 {
+      font-size: 35px;
+    }
+    nav a {
+      color: wheat;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 20px;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+    .gallery-section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .gallery-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.08);
+      width: 300px;
+      height: 400px;
+    }
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+    footer {
+      position: sticky;
+      bottom: 0;
+      background-color: #243b55;
+      color: wheat;
+      z-index: 998;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding: 15px 20px;
+      font-size: 20px;
+    }
+    .footer-bottom a {
+      text-decoration: none;
+      color: wheat;
+      margin-right: 10px
+    }
+    .footer-bottom a:hover {
+      text-decoration: underline;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Naturfizz</h1>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/about section.html">About</a>
+      <a href="/product.html">Product</a>
+      <a href="/query form.html">Query</a>
+      <a href="/feedback form.html">Feedback</a>
+      <a href="/Contact.html">Contact Us</a>
+    </nav>
+  </header>
+  <main>
+    <section class="gallery-section">
+      <h2>Product Gallery</h2>
+      <div class="gallery-grid" id="galleryGrid">
+        <img src="/kiwi lemon.png" alt="Kiwi Lemon Flavour">
+        <img src="/apple.png" alt="Apple Flavour">
+        <img src="/Berry.png" alt="Berry Flavour">
+        <img src="/mango.png" alt="Mango Flavour">
+        <img src="/orange lemon.png" alt="Orange Lemon Flavour">
+        <img src="/lemon.png" alt="Lemon Flavour">
+        <img src="/orange.png" alt="Orange Flavour">
+        <img src="/watermelon.png" alt="Watermelon Flavour">
+        <img src="/pineapple.png" alt="Pineapple Flavour">
+        <img src="/Strawberry.png" alt="Strawberry Flavour">
+      </div>
+    </section>
+    <div class="lightbox" id="lightbox">
+      <img src="" alt="Preview" id="lightboxImage" />
+    </div>
+  </main>
+  <footer>
+    <div class="footer-bottom">
+      &copy; 2025 Naturfizz. All rights reserved || Designed by
+      <a href="https://www.linkedin.com/in/ganeshan-rathor-2ab402317/" target="_blank">Ganeshan Rathor</a>
+    </div>
+  </footer>
+</body>
+</html>

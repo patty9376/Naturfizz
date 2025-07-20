@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Query page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: linear-gradient(170deg, rgba(146, 122, 94, 1) 20%, rgba(93, 73, 61, 1) 64%, rgba(30, 30, 30, 1) 90%);
+      margin: 0;
+      padding: 0;
+      background-position: fixed;
+    }
+
+    main {
+      flex: 1;
+    }
+    header {
+      color: wheat;
+      padding: 15px 30px;
+      font-size: 20px;
+      position: sticky;
+      top: 0;
+      background:rgba(93, 73, 61, 1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      
+    }
+    header h1 {
+      font-size: 30px;
+    }
+    nav a {
+      color: wheat;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 20px;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 160px auto 60px;
+    }
+
+    .container {
+      width: 560px;
+      background: transparent;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(15px);
+      box-shadow: 0 8px 32px wheat;
+      color: #fff;
+      border-radius: 15px;
+      padding: 40px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: wheat;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      color: wheat;
+      font-weight: 500;
+    }
+
+    textarea,
+    input[type="text"],
+    select {
+      width: 475px;
+      padding: 10px;
+      margin-top: 5px;
+      border: 2px solid wheat;
+      border-radius: 8px;
+      resize: vertical;
+      font-size: 1rem;
+      background: transparent;
+    }
+
+    textarea:hover,
+    input[type="text"]:hover,
+    select:hover {
+      box-shadow: 1px wheat;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      transform: scale(1.1);
+      box-shadow: 0 0 5px black;
+      outline: none;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background: transparent;
+      color: wheat;
+      
+      border: 2px solid wheat;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.1s ease;
+    }
+
+    button:hover {
+      background:rgba(93, 73, 61, 1);
+    }
+    footer {
+      position: sticky;
+      bottom: 0;
+      background-color:rgba(93, 73, 61, 1) ;
+      color: wheat;
+      z-index: 998;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding: 15px 20px;
+      font-size: 20px;
+    }
+    .footer-bottom a {
+      text-decoration: none;
+      color: wheat;
+      margin-right: 10px
+    }
+    .footer-bottom a:hover {
+      text-decoration: underline;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Naturfizz</h1>
+      <nav>
+      <a href="/index.html">Home</a>
+      <a href="/about section.html">About</a>
+      <a href="/product.html">Product</a>
+      <a href="/query form.html">Query</a>
+      <a href="/feedback form.html">Feedback</a>
+      <a href="/Contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <div class="wrapper">
+    <div class="container">
+      <h2>Submit Your Query</h2>
+      <form action="#" method="post">
+        <label for="qname">Your Name:</label>
+        <input type="text" id="qname" name="qname" required />
+
+        <label for="qemail">Your Email:</label>
+        <input type="text" id="qemail" name="qemail" required />
+
+        <label for="query">Your Query:</label>
+        <textarea id="query" name="query" rows="5" required></textarea>
+
+        <button type="submit">Send Query</button>
+      </form>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-bottom">
+      &copy; 2023 Naturfizz. All rights reserved || Designed by
+      <a href="https://www.linkedin.com/in/ganeshan-rathor-2ab402317/" target="_blank">Ganeshan Rathor</a>
+    </div>
+  </footer>
+    <script>
+    // Basic JavaScript for form handling
+        document.getElementById('queryForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const name = document.getElementById('qname').value.trim();
+      const email = document.getElementById('qemail').value.trim();
+      const query = document.getElementById('query').value.trim();
+      const message = document.getElementById('message');
+
+      if (!name || !email || !query) {
+        message.style.color = 'salmon';
+        message.textContent = 'Please fill in all the fields.';
+        return;
+      }
+
+      message.style.color = 'lightgreen';
+      message.textContent = 'Your query form is submitted.';
+
+      // Optionally clear the form
+      document.getElementById('queryForm').reset();
+    });
+
+  </script>
+</body>
+</html>
